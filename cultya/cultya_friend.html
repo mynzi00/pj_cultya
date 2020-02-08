@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" container="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" container="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- 글씨체 링크 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <!-- 글씨체 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        /* 버드박스 텍스트 위치 */
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        .left {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        .right {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        .top {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        .bottom {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        
+        .locate {
+            margin: auto;
+            text-align: center;
+        }
+
+
+        /* 포스트 설정 */
+        .name {
+            padding: 15px;
+            font-size: 20px;
+            border-top: grey solid 1px;
+            border-bottom: grey solid 1px;
+            text-align: center;
+            clear: both;
+            margin: 0 auto 10px;
+            font: bold;
+        }
+        .time {
+            text-align: right;
+            font-size: 13px;
+            margin: auto;
+            color: rgb(99, 98, 98);
+        }
+
+        .contextbox {
+            float: right;
+            width: 50%;
+        }
+        .textbox {
+            clear: both;
+            padding: 30px 0 0 30px;
+            font-size: 14px;
+        }
+        .col-img {
+            width: 50%;
+            float: left;
+        }
+        .star {
+            float: right;
+            padding: 0px;
+            text-align: right;
+            color: #444;
+            font-size: 14px;
+        }
+        .commentbox {
+            width: 150px;
+            height: 75px;
+            text-align: center;
+            /* background-color: rgba(238, 228, 228, 0.1); */
+            
+        }
+        button.heart {
+            float: right;
+            background-color: #f2f2f2;
+            color: #ccc;
+            border: none;
+        }
+        button.heart:hover {
+            color: #b36868;
+        }
+        .heart-col {
+            float: right;
+        }
+    </style>
+</head>
+<body class="bg">
+    <div class="notoserif">
+        <div class="sizing">
+
+            <header> 
+                <div class="cultya" >
+                    <h1 class="lobster" style="color: rgba(0, 0, 0, 0.9); " ><b>C U L T Y A </b></h1>
+                    <h3 class="lobster" style="font-style: italic; color: rgba(24, 24, 24, 0.863)" >My culture diary <br> </h3> 
+                        
+                </div>
+            
+                    <nav>
+                        <div class="menu">      
+    
+                                    <div class="iconpost">
+                                        <a href="cultya_post.html" target="blank"><img src="https://image.flaticon.com/icons/svg/1159/1159633.svg" alt="post" width="20px" height="20px"></a>  Post - 
+                                    
+                                        <a href="cultya_best.html"><img src="https://image.flaticon.com/icons/svg/1414/1414478.svg" alt="best"width="22px" height="22px"></a>    Best - 
+
+                                        <button class="" onclick="openCity('Friend')"><img src="https://image.flaticon.com/icons/svg/126/126486.svg" alt="people"width="20px" height="20px">Friend</button>
+
+                            <div id="Friend" class="w3-container w3-display-container city" style="display:none">
+                                <span onclick="this.parentElement.style.display='none'"
+                                class="w3-button w3-large w3-display-topright">&times;</span>
+                                <a href="cultya_friend.html"><p>peng_soo</p></a>
+                            </div>
+
+                        </div>
+                              <script>
+                              function openCity(cityName) {
+                                var i;
+                                var x = document.getElementsByClassName("city");
+                                for (i = 0; i < x.length; i++) {
+                                  x[i].style.display = "none";  
+                                }
+                                document.getElementById(cityName).style.display = "block";  
+                              }
+                              </script>
+                    
+                                     <div class="iconprofile" >
+                                         <img src="이미지/펭수.gif" width="45px" height="40px">  peng_soo <br>
+                                    </div>
+                                         
+                                    <!-- <div style="float: left;; color: #444; font-size: 10px;">Total 1201</div> -->
+                                    
+                                </div>
+                            
+                    </nav>
+            </header>
+
+
+
+            <!-- 게시글 1 -->
+            <!-- 게시글 제목 1 -->
+            <div class="name">
+                내가 사랑했던 모든 남자들에게
+                <p class="time">2020. 1. 29. 1:40</p>
+            </div>      
+
+            <!-- 게시글 내용 타입2 사진 위 글씨 -->
+            <div class="container">
+                <div>
+                    <div class="star">
+                        <img src="이미지/넷플릭스.jpg" width="18px" height="18px">
+                        movie | ★★★★★</div>
+                    
+                    <img src="이미지/사랑.jpg" alt="love"  width="100%" style="margin: 20px 0;">
+
+                    <div id='text1'class="center commentbox">
+                        비밀 러브레터가 <br> 현실이 된 순간 <br> 2020. 1. 28
+                    </div>
+                    <!-- 텍스트 박스가 회색 container 박스에 상속?되어있네요 -->
+
+                    <div class="locate">
+                        <button onclick="document.getElementById('text1').classList.remove('left'); document.getElementById('text1').classList.remove('right'); document.getElementById('text1').classList.remove('top'); document.getElementById('text1').classList.remove('bottom');">리셋</button>
+
+                        <button onclick="document.getElementById('text1').classList.add('left');">←</button>
+
+                        <button onclick="document.getElementById('text1').classList.add('right')">→</button>
+
+                        <button onclick="document.getElementById('text1').classList.add('top')">↑</button>
+
+                        <button onclick="document.getElementById('text1').classList.add('bottom')">↓</button>
+
+                        <button class="heart" id="like4" onclick="touchLike('like4')"><div class="heart-col">♥</div><div class="heart-col"><span id="count4"></span></div></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 게시글 제목2 -->
+            <div class="name">
+                동백꽃 필 무렵
+                <p class="time">2020. 2. 7. 02:10</p>
+            </div>
+            <!-- 게시글2 -->
+            <!-- 게시글 내용 타입1 다이어리 -->
+            <div class="container">
+                <div class="col-img">
+                    <img src="이미지/동백꽃.jpg"width="100%" >
+                </div>
+                            
+                <div class="contextbox">
+                    <div class="star"> drama, ★★★★☆</div>
+                    <div class="textbox">
+                        드라마 中 명대사 <br><br>
+                        "기적은 없다. <br> 
+                         영웅들의 합심,<br>
+                         착한 사람들의 선의,,<br>
+                         소리없이 차오르는 구세군,<br>
+                         착실히 다렬온 마리오의 동전이 모여,<br>
+                         기적처럼 보일 뿐"<br><br><br>
+                        
+                        
+​
+                         기적을 바라기보단 <br> 
+                         기적과 같은 행동을 하는 한 해가 되길<br><br><br>
+​
+                        2019.12.31
+                    </div>
+                    <button class="heart" id="like5" onclick="touchLike('like5')"><div class="heart-col">♥</div><div class="heart-col"><span id="count5"></span></div></button>
+                </div>
+                </div>
+
+            <!-- 게시글 제목3 -->
+            <div class="name">
+                Murder Mystery
+                <p class="time">2020. 2. 1. 16:10</p>
+            </div>
+            <!-- 게시글3 -->
+            <!-- 게시글 내용 타입1 다이어리 -->
+            <div class="container">
+                <div class="col-img">
+                    <img src="이미지/살인.jpg"  width="100%" >
+                </div>
+                            
+                <div class="contextbox">
+                    <div class="star">
+                        <img src="이미지/넷플릭스.jpg" width="18px" height="18px">
+                        movie, ★★★★★</div>
+                    <div class="textbox">
+                        코미디 추리물 <br><br>
+                        갑작스레 초대받은 선장 파티, <br> 
+                        갑작스레 일어난 살인 사건! <br>
+                        범인을 찾는 과정을 <br>
+                        배꼽 빠지게 만들었다. <br><br><br>
+
+                        극장에서 개봉했으면 <br> 
+                        너무 좋겠다! <br><br><br>
+
+                        2019.12.25
+                    </div>
+                    <button class="heart" id="like6" onclick="touchLike('like6')"><div class="heart-col">♥</div><div class="heart-col"><span id="count6"></span></div></button>
+                </div>
+
+            </div>
+                    
+            
+                                
+            <!-- 게시글4 -->
+            <!-- 게시글 제목4 -->
+            <div class="name">
+                타오르는 여인의 초상
+                <p class="time">2020. 2. 4. 19:42</p>
+            </div>      
+​
+            <!-- 게시글 내용 타입2 사진 위 글씨 -->
+            <div class="container">
+                <div>
+                    <div class="star">movie | ★★★★★</div>
+                    
+                    <img src="이미지/여인상.jpg" style="margin: 20px 0;" width="100%">
+​
+                    <div id='text1'class="center commentbox">
+                        <br>당신을 그리러 왔어요. <br> 2020.01.16
+                    </div>
+                    <!-- 텍스트 박스가 회색 container 박스에 상속?되어있네요 -->
+                    <button class="heart" id="like7" onclick="touchLike('like7')"><div class="heart-col">♥</div><div class="heart-col"><span id="count7"></span></div></button>
+                    </div>
+                </div>
+            </div>
+
+
+                    <script>
+                        // 하트 눌렀을 때 반응하는 함수
+                        function touchLike(id) {
+                            // id값을 통해 통제할 element 지정
+                            const el = document.getElementById(id);
+                            // 등록시간, 별명, 댓글 내용을 array로 저장
+                            // 로컬 스토리지에 저장된 해당 key값의 value가 null이다 = 기존 댓글 데이터가 없다
+                            const countId = "count" + id.substr(id.length - 1);
+                            // localStroage에 클릭 여부를 저장 (하트 했으면 t, 안 했으면 f)
+                            if (!localStorage.getItem(id)) { // localStorage에 데이터가 없으면
+                                localStorage.setItem(id, "t");
+                                // 문자열 -> 숫자로 바꾸는 여러 방법 중, +를 앞에 붙이는 간단한 방법이 있음
+                                // cf) parseInt(), Number() ...
+                                localStorage.setItem(countId, +localStorage.getItem(countId) + 1);
+                            } else if (localStorage.getItem(id) == "f") { // 하트가 f 상태 일 때
+                                localStorage.setItem(id, "t"); // t로 바꿔줌
+                                localStorage.setItem(countId, +localStorage.getItem(countId) + 1); // 갯수 증가
+                            } else { // localStorage에 데이터도 있고, 하트가 t 상태임
+                                localStorage.setItem(id, "f"); // f로 바꿔줌
+                                localStorage.setItem(countId, +localStorage.getItem(countId) - 1); // 갯수 감소
+                            }
+                            likeCount("count" + id.slice(-1));
+                        }
+                        
+                        function likeCount(id, init) {
+                            // 좋아요 갯수를 조작하는 함수
+                            // setItem으로 집어넣어주는데, 최초로 localStorage가 비어 있을 때만을 위한 메소드를 오버라이딩으로 구현
+                            if (!localStorage.getItem(id)) localStorage.setItem(id, init);
+                            document.getElementById(id).innerHTML =
+                                // 세번째 자리수에 콤마 넣어주는 코드
+                                localStorage.getItem(id).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");}
+
+                        likeCount("count4", 350) // 341로 초기화 (한 번 생성되면 직접 지우기까지 삭제 안 됨)
+                        likeCount("count5", 333)
+                        likeCount("count6", 200)
+                        likeCount("count7", 216)
+                    </script>
+
+                </div>  
+            </div>            
+        </div>
+    </div>
+</body >
+</html>
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- 글씨체 링크 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <!-- 글씨체 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .container {
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            overflow: auto;
+        }
+        .expln {
+            padding: 10px;
+            color: #333;
+        }
+
+        .arrange {
+            padding: 6px;
+            float: left;
+            width: 49%;
+            overflow: auto;
+        }
+        .gallery {
+            border: 1px solid #ccc;
+        }
+        .gallery:hover {
+            border: 1px solid #777;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+        .desc {
+            padding: 15px;
+            text-align: center;
+            background-color: white;
+            font-style: italic;
+        }
+        button.heart {
+            text-align: right;
+            background-color: white;
+            color: #ccc;
+            border: none;
+        }
+        button.heart:hover {
+            color: #b36868;
+        }
+    </style>
+</head>
+<body class="bg">
+    <div>
+        <div class="sizing notoserif">
+
+            <header> 
+                <div class="cultya" >
+                    <h1 class="lobster" style="color: rgba(0, 0, 0, 0.9); " ><b>C U L T Y A </b></h1>
+                    <h3 class="lobster" style="font-style: italic; color: rgba(24, 24, 24, 0.863)" >My culture diary <br> </h3> 
+                        
+                </div>
+            
+                    <nav>
+                        <div class="menu">      
+    
+                            <div class="iconpost">
+                                <a href="cultya_post.html" target="blank"><img src="https://image.flaticon.com/icons/svg/1159/1159633.svg" alt="post" width="20px" height="20px"></a>  Post - 
+                                    
+                                <a href="cultya_best.html"><img src="https://image.flaticon.com/icons/svg/1414/1414478.svg" alt="best"width="22px" height="22px"></a>    Best - 
+
+                                <button class="" onclick="openCity('Friend')"><img src="https://image.flaticon.com/icons/svg/126/126486.svg" alt="people"width="20px" height="20px">Friend</button>
+
+                                <div id="Friend" class="w3-container w3-display-container city" style="display:none">
+                                    <span onclick="this.parentElement.style.display='none'"
+                                    class="w3-button w3-large w3-display-topright">&times;</span>
+                                    <a href="cultya_friend.html"><p>peng_soo</p></a>
+                                </div>
+
+                            </div>
+                              <script>
+                              function openCity(cityName) {
+                                var i;
+                                var x = document.getElementsByClassName("city");
+                                for (i = 0; i < x.length; i++) {
+                                  x[i].style.display = "none";  
+                                }
+                                document.getElementById(cityName).style.display = "block";  
+                              }
+                              </script>
+                    
+                                     <div class="iconprofile" >
+                                         <img src="./이미지/고양이.png" alt="profile" width="40px" height="40px">  kku_kku <br>
+                                    </div>
+                                         
+                                    <!-- <div style="float: left;; color: #444; font-size: 10px;">Total 1201</div> -->
+                                    
+                                </div>
+                            
+                    </nav>
+            </header>
+
+            <div class="container">
+                <div class="expln">친구와 Cultya!</div>
+                <div class="notoserif">
+
+                    <div class="arrange">
+                        <div class="gallery">
+                            <a href="cultya_main.html">
+                                <img src="./이미지/앤.jpg" alt="best" width="600" height="400">
+                            </a>
+                            
+                            <div class="desc">
+                                <button class="heart">♥</button>
+                                이 세상엔 좋아할 것이 이렇게 만다는 게…
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="arrange">
+                        <div class="gallery">
+                            <a href="cultya_main.html" target="_blank">
+                                <img src="./이미지/버드 박스.jpg" alt="best" width="600" height="400">
+                            </a>
+                        
+                            <div class="desc">
+                                <button class="heart">♥</button>
+                                영화 내내 느껴졌던 공포를 <br> 누군가는 매일 느끼고 살아간다는 것을…
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="arrange">
+                        <div class="gallery">
+                            <a href="cultya_friend.html">
+                                <img src="./이미지/여인상.jpg" alt="best" width="600" height="400">
+                            </a>
+                        
+                            <div class="desc">
+                                <button class="heart">♥</button>
+                                당신을 그리러 왔어요
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
